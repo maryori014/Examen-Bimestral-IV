@@ -1,31 +1,37 @@
-let form = document.getElementById("container");
-let content= document.getElementById("content");
+let alternatives-container = document.getElementById("1");
+let fig2 = document.getElementById("2");
+let fig3 = document.getElementById("3");
+let fig4 = document.getElementById("4");
 
-let figuras =[];
-
-form.addEventListener("submit", (event)=> {
-    event.preventDefault();
-    let data = new FormData(form);
-    figuras.push({
-        nombre: data.get("nombre"),
-        figura: data.get("figura"),
-        color: data.get("color"),
-    });
-    pintar_figuras();
+fig1.addEventListener("click", () =>{
+    if(eve==1)
+    {
+        console.log('correcto')
+    }
+    function mostrar(){
+        document.getElementById('img').style.display = 'block';
+        mostrar();
+    }
 });
-const pintar_figuras = () =>{
-    content.innerHTML="";
-    figuras.forEach((e) => {
-        content.insertAdjacentHTML(
-            "beforeend",
-          `
-          <div
-          class="${e.figura}"
-          style="background:${e.color};"
-          >
-          ${e.nombre}
-          </div>
-        `
-        );
-    });
-}
+
+fig2.addEventListener("click", () =>{
+    if(eve==1)
+    {
+        console.log('correcto')
+    }
+    function mostrar(){
+        document.getElementById('img').style.display = 'block';
+        mostrar();
+    }
+});
+
+fig3.addEventListener("click", () =>{
+    if(eve==1)
+    {
+        console.log('correcto')
+    }
+    function mostrar(){
+        document.getElementById('img').style.display = 'block';
+        mostrar();
+    }
+})

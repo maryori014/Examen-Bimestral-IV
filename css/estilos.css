@@ -1,49 +1,89 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Lobster', cursive;
+  box-sizing: border-box;
+  background-image: url(../img/Pantalla-fondo.jpg);
+  background-size: 100%;
 }
-body {
+h1 {
+  font-size: 60px;
+  color: #4e3d1c;
+  text-shadow: 3px 0 #ffffffee;
+  text-align: center;
+}
+.game-box-container {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(-45deg,#e48e74, #df78a0bb, #64bcd6ec, #5de7c7cc);
-  background-size: 500%;
-  position: relative;
-  animation: change 12s ease-in-out infinite;
-}
-@keyframes change {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cuadrado{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10em;
-  height: 10em;
   margin-top: 2em;
-
-}
-.circulo{
   display: flex;
   justify-content: center;
+}
+.game-box {
+    width: 90%;
+    height: 53vh;
+    background-color: #7a4a29ab;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.serie-container {
+  height: 6em;
+  width: 95%;
+  grid-template-columns: repeat(8,12.5%);
+}
+.alternatives-container, 
+.serie-container {
+  display: grid;
+  grid-template-rows: 100%;
   align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+.serie-item-container {
+  width: 6em;
+  height: 6em;
+  background: transparent;
+  box-shadow: 0 0 20px #323232;
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
-  margin-top: 2em;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.fig-fig1 {
+  background-image: url(../img/Pikachu.png);
+}
+.fig-fig2 {
+  background-image: url(../img/Pokémon.jpg);
+}
+.fig-fig3 {
+  background-image: url(../img/Pokémon1.jpg);
+}
+.fig-fig4 {
+  background-image: url(../img/Pokémon2.jpg);
+}
+.fig-interrogation {
+  background-image: url(../img/interrogacion.png);
+}
+
+.alternatives-container {
+  height: 8em;
+  width: 90%;
+  grid-template-columns: repeat(4,25%);
+  position: relative;
+}
+
+.alternative-item {
+  width: 6em;
+  height: 6em;
+  border: 3px solid #83561bd3;
+  border-radius: 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+  cursor: pointer;
 }
